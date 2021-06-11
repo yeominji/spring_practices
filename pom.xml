@@ -49,5 +49,6 @@
 		<module>aoptest</module>
 		
 		<module>fileupload</module>
+		<module>contaniner</module>
 	</modules>
 </project>

@@ -1,4 +1,4 @@
-package com.douzone.container.config.soudsystem;
+package com.douzone.container.config.soundsystem;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -11,11 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.douzone.container.soudsystem.CDPlayer;
+import com.douzone.container.soundsystem.CDPlayer;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=CDPlayerConfig.class)
-public class CDPlayerJavaConfigTest {
+@ContextConfiguration(locations={"classpath:com/douzone/container/config/soudsystem/CDPlayerConfig.xml"})
+public class CDPlayerXmlConfigTest {
 	@Rule
 	public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 

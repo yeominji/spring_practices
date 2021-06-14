@@ -1,4 +1,4 @@
-package com.douzone.container.soudsystem;
+package com.douzone.container.soundsystem;
 
 public interface CompactDisc {
 void play();

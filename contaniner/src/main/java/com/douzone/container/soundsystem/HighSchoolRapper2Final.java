@@ -1,4 +1,4 @@
-package com.douzone.container.soudsystem;
+package com.douzone.container.soundsystem;
 
 import org.springframework.stereotype.Component;
 

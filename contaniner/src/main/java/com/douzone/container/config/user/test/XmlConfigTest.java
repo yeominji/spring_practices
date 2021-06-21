@@ -18,7 +18,7 @@ public class XmlConfigTest {
 
 		// XML Bean Configuration(Explicit Configuration)
 		// testBeanFactory02();
-
+		
 		// XML Auto Configuration(Annotation Scanning)
 		// testApplicationContext01();
 
@@ -34,26 +34,26 @@ public class XmlConfigTest {
 		// id로 빈 가져오기
 		User user = (User)ac.getBean("user");
 		System.out.println(user);
-
+	
 		// name으로 빈 가져오기
 		user = (User)ac.getBean("usr");
 		System.out.println(user);
-
+		
 		// type으로 가져오기
 		// 같은 타입의 빈이 2개 이상 있는 경우 type으로 가져오면 Error!
 		// 1. type + id
 		// 2. type + name
 		user = ac.getBean("user2", User.class);
 		System.out.println(user);
-
+		
 		// 2개 파라미터 생성자로 생성된 빈 가져오기1
 		user = ac.getBean("user3", User.class);
 		System.out.println(user);
-
+		
 		// 2개 파라미터 생성자로 생성된 빈 가져오기2
 		user = ac.getBean("user4", User.class);
 		System.out.println(user);
-
+		
 		// setter를 사용한 빈 가져오기1
 		user = ac.getBean("user5", User.class);
 		System.out.println(user);
@@ -73,14 +73,14 @@ public class XmlConfigTest {
 	private static void testApplicationContext01() {
 		ApplicationContext ac 
 			= new ClassPathXmlApplicationContext("com/douzone/container/config/user/applicationContext01.xml");
-
+		
 		User1 user1 = ac.getBean(User1.class);
 		System.out.println(user1.getName());
-
+		
 		// Bean id 가 자동으로 설정됨
 		user1 = (User1)ac.getBean("user1");
 		System.out.println(user1.getName());
-
+		
 		// 자원정리
 		((ConfigurableApplicationContext)ac).close();
 	}
@@ -91,7 +91,7 @@ public class XmlConfigTest {
 
 		User1 user1 = bf.getBean(User1.class);
 		System.out.println(user1.getName());
-
+		
 		// Bean id 가 자동으로 설정됨
 		user1 = (User1)bf.getBean("user1");
 		System.out.println(user1.getName());
@@ -103,12 +103,12 @@ public class XmlConfigTest {
 
 		User1 user1 = bf.getBean(User1.class);
 		System.out.println(user1.getName());
-
+		
 		// Bean id 가 자동으로 설정되지 않음
 		// 명시적으로 설정해야 한다.
 		user1 = (User1)bf.getBean("user1");
 		System.out.println(user1.getName());
-
+		
 	}
 
 }
